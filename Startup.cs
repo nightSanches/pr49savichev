@@ -29,14 +29,20 @@ namespace pr49savichev
                 c.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Version = "v2",
-                    Title = "Получение списка версий, блюд, истории",
-                    Description = "Получение списка версий, блюд или истории"
+                    Title = "Получение списка версий или блюд",
+                    Description = "Получение списка версий или блюд"
                 });
                 c.SwaggerDoc("v3", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Version = "v3",
                     Title = "Отправка заказа",
                     Description = "Отправка заказа"
+                });
+                c.SwaggerDoc("v4", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Version = "v4",
+                    Title = "Получение истории",
+                    Description = "Получение истории заказов"
                 });
                 var filePath = Path.Combine(System.AppContext.BaseDirectory, "pr49savichev.xml");
                 c.IncludeXmlComments(filePath);
@@ -51,9 +57,10 @@ namespace pr49savichev
             app.UseMvcWithDefaultRoute();
             app.UseSwagger();
             app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Регистрация или Авторизация");
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "Получение списка версий, блюд, истории");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Регистрация, Авторизация");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "Получение списка версий, блюд");
                 c.SwaggerEndpoint("/swagger/v3/swagger.json", "Отправка заказа");
+                c.SwaggerEndpoint("/swagger/v4/swagger.json", "Получение истории");
             });
         }
     }
