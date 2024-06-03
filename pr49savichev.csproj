@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 	 <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	 <DocumentationFile>obj\Debug\netcoreapp3.1\pr49savichev.xml</DocumentationFile>
+	 <DocumentationFile>C:\Users\User\Desktop\pr49savichev\obj\Debug\netcoreapp3.1\netcoreapp3.1\pr49savichev.xml</DocumentationFile>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -16,10 +16,6 @@
     </PackageReference>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

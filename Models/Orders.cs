@@ -5,7 +5,7 @@ namespace pr49savichev.Models
     /// <summary>
     /// Отправить заказ
     /// </summary>
-    public class Order
+    public class Orders
     {
         /// <summary>
         /// Код заказа

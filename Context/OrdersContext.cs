@@ -5,14 +5,14 @@ namespace pr49savichev.Context
 {
     public class OrdersContext : DbContext
     {
-        public DbSet<Order> Order { get; set; }
+        public DbSet<Orders> Orders { get; set; }
         /// <summary>
         /// Конструктор контекста
         /// </summary>
         public OrdersContext()
         {
             Database.EnsureCreated();
-            Order.Load();
+            Orders.Load();
         }
         /// <summary>
         /// Переопределяем метод конфигурации
